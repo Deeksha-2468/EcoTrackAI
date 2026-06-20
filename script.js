@@ -4,6 +4,7 @@ let travelInput = document.getElementById("travel").value;
 let electricityInput = document.getElementById("electricity").value;
 let plasticInput = document.getElementById("plastic").value;
 
+// Input validation
 if(
 travelInput.trim() === "" ||
 electricityInput.trim() === "" ||
@@ -41,9 +42,11 @@ return;
 }
 
 
-// Simple carbon score calculation
+
+// Carbon score calculation
 let score = (travel * 0.2) + (electricity * 0.5) + (plastic * 0.3);
 
+// Generate eco-friendly suggestions
 let suggestion = "";
 
 if(score < 50){
@@ -114,6 +117,7 @@ challenges[Math.floor(Math.random() * challenges.length)];
 
 document.getElementById("challenge").innerHTML =
 randomChallenge;
+// Update progress tracker
 let progressValue = ((300 - score) / 300) * 100;
 
 if(progressValue < 0){
