@@ -107,6 +107,15 @@ The application was tested for:
 - Community leaderboard
 
 ---
+## 📸 Screenshots
+
+### Home Page
+
+![Home Page](IMG_20260617_163355.jpg)
+
+### Result Page
+
+![Result Page](IMG_20260617_163342.jpg)
 
 👩‍💻 Author
 
