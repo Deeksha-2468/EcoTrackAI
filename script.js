@@ -117,6 +117,26 @@ else{
 }
 
 document.getElementById("advisor").innerHTML = advisor;
+let actions = [];
+
+if(travel > 50){
+    actions.push("🚲 Use public transport or cycling for short trips.");
+}
+
+if(electricity > 200){
+    actions.push("💡 Reduce electricity consumption by switching off unused devices.");
+}
+
+if(plastic > 50){
+    actions.push("♻️ Replace single-use plastics with reusable alternatives.");
+}
+
+if(actions.length === 0){
+    actions.push("🌱 Great job! Continue your sustainable lifestyle.");
+}
+
+document.getElementById("actionPlan").innerHTML =
+actions.map(item => "<li>" + item + "</li>").join("");
 let challenges = [
 
 "🚶 Walk or cycle instead of using a vehicle today.",
@@ -168,6 +188,7 @@ document.getElementById("level").innerHTML = "";
 document.getElementById("achievement").innerHTML = "";
 document.getElementById("tip").innerHTML = "";
 document.getElementById("advisor").innerHTML = "";
+document.getElementById("actionPlan").innerHTML = "";
 
 document.getElementById("challenge").innerHTML =
 "Complete one eco-friendly action today!";
