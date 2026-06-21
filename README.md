@@ -116,6 +116,16 @@ The application was tested for:
 ### Result Page
 
 ![Result Page](IMG_20260617_163342.jpg)
+Smart Assistant Logic
+
+EcoTrackAI acts as a rule-based sustainability assistant. It analyzes travel distance, electricity consumption, and plastic usage to estimate a user's environmental impact and generate personalized recommendations.
+
+Assumptions
+
+- Users provide approximate environmental data.
+- The carbon score is an awareness metric and not an official environmental assessment.
+- Recommendations are generated using rule-based sustainability logic.
+- The platform is designed for awareness and educational purposes.
 
 👩‍💻 Author
 
