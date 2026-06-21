@@ -20,7 +20,7 @@ document.getElementById("tip").innerHTML = "";
 
 return;
 }
-
+let name = document.getElementById("name").value;
 let travel = Number(travelInput);
 let electricity = Number(electricityInput);
 let plastic = Number(plasticInput);
@@ -98,6 +98,25 @@ else{
 
 document.getElementById("tip").innerHTML =
 "🤖 AI Suggestion: " + suggestion;
+let advisor = "";
+
+if(score < 50){
+    advisor =
+    "Excellent work, " + name +
+    "! Your carbon footprint is low. Keep maintaining sustainable habits.";
+}
+else if(score < 100){
+    advisor =
+    name +
+    ", your footprint is moderate. Reducing vehicle usage and plastic consumption can improve your environmental impact.";
+}
+else{
+    advisor =
+    name +
+    ", your footprint is high. Focus on reducing electricity consumption, limiting plastic use, and choosing eco-friendly transportation.";
+}
+
+document.getElementById("advisor").innerHTML = advisor;
 let challenges = [
 
 "🚶 Walk or cycle instead of using a vehicle today.",
@@ -138,6 +157,7 @@ progressValue.toFixed(0) + "%";
 }
 function resetForm(){
 
+document.getElementById("name").value = "";
 document.getElementById("travel").value = "";
 document.getElementById("electricity").value = "";
 document.getElementById("plastic").value = "";
@@ -147,6 +167,7 @@ document.getElementById("badge").innerHTML = "";
 document.getElementById("level").innerHTML = "";
 document.getElementById("achievement").innerHTML = "";
 document.getElementById("tip").innerHTML = "";
+document.getElementById("advisor").innerHTML = "";
 
 document.getElementById("challenge").innerHTML =
 "Complete one eco-friendly action today!";
